@@ -69,23 +69,30 @@ const GenAiChat = () => {
           placeholder="Enter your prompt here"
         />
       </div>
-      <button onClick={handleGemini}>
-        {loading ? "Thinking..." : "AI button"}
+      <button
+        style={{ marginTop: 10, marginBottom: 10 }}
+        onClick={handleGemini}
+      >
+        {loading ? "Thinking..." : "Generate"}
       </button>
-      <div style={{ marginTop: 20, whiteSpace: "pre-wrap" }}>
+      <div
+        style={{
+          width: "80vw",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
         <strong>Response:</strong>
         <p
           style={{
             whiteSpace: "pre-wrap",
             wordBreak: "break-word",
             textAlign: "left",
-            backgroundColor: "#d3d3d3",
-            color: "black",
+            backgroundColor: "#3B3B3B",
+            color: "lightgray",
             padding: 10,
             borderRadius: 10,
-            marginTop: 10,
-            marginBottom: 10,
-            marginLeft: 10,
           }}
         >
           {responseText}
