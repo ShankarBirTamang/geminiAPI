@@ -67,8 +67,8 @@ const GenAiChat = () => {
         .replace(/```\n?/g, "") // Remove ```
         .trim(); // Remove extra whitespace
 
-      // const quizData = JSON.parse(cleanedResponse);
-      setResponseText(cleanedResponse);
+      const quizData = JSON.parse(cleanedResponse);
+      setResponseText(quizData.questions.map((question) => question.question));
     } catch (error) {
       console.error("Error:", error);
       setResponseText("Error: " + error.message);
