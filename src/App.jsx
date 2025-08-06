@@ -1,13 +1,12 @@
-import './App.css'
-import GenAiChat from './GenAiChat'
+import "./App.css";
+import GenAiChat from "./GenAiChat";
 
 function App() {
-
   return (
     <>
-      <GenAiChat/>
+      <GenAiChat />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
